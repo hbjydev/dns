@@ -43,6 +43,9 @@ D('hbjy.dev', noreg, DnsProvider(cloudflare),
   TXT('_scaleway-challenge', '59ef7059-fccf-4ff3-8230-60dbac852afc'),
   TXT('@', 'keybase-site-verification=Wr2DT9CD4z8RQ2sLSVjdLtezue-d8BVio7VsRi52RUQ'),
 
+  A('cdg-dat-postgres01.scw', ips['postgres01']),
+  A('cdg-k8s-cluster01.scw', ips['kube-lb']),
+
   // ---- email config ----
   MX('@', 1, 'aspmx.l.google.com.'),
   MX('@', 5, 'alt1.aspmx.l.google.com.'),
