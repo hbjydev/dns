@@ -11,6 +11,9 @@ jobs:
     name: 'DNSControl Preview'
     runs-on: ubuntu-20.04
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
       - name: Install and configure GPG & Blackbox
         shell: bash
         env:
