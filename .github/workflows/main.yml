@@ -14,7 +14,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
 
-      - name: Install and configure GPG & Blackbox
+      - name: Install and configure GPG, Blackbox and dnscontrol
         shell: bash
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
@@ -27,4 +27,10 @@ jobs:
           cd ..
           gpg2 -v --import <(echo "$GPG_PRIVATE_KEY")
           GPG=gpg2 blackbox_postdeploy
+          curl -Lo ./dnscontrol https://github.com/StackExchange/dnscontrol/releases/download/v3.11.0/dnscontrol-Linux
+
+      - name: Run dnscontrol preview
+        shell: bash
+        run: |
+          ./dnscontrol preview
 
