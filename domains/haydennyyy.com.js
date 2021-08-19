@@ -1,4 +1,4 @@
-D('itshayden.dev', noreg, DnsProvider(cloudflare),
+D('haydennyyy.com', noreg, DnsProvider(cloudflare),
   cf_proxy_default_off,
 
   CNAME('_domainconnect', 'connect.domains.google.com.'),
