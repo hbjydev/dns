@@ -1,0 +1,27 @@
+---
+name: 'DNS Deployment'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  preview:
+    name: 'DNSControl Preview'
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Install and configure GPG & Blackbox
+        shell: bash
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          apt-get update -qq &&
+          apt-get -yqq install gnupg2
+          git clone https://github.com/mipmip/blackbox
+          cd blackbox
+          make manual-install
+          cd ..
+          gpg2 -v --import <(echo "$GPG_PRIVATE_KEY")
+          GPG=gpg2 blackbox_postdeploy
+
