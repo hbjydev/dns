@@ -16,9 +16,9 @@ jobs:
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          apt-get update -qq &&
-          apt-get -yqq install gnupg2
-          git clone https://github.com/mipmip/blackbox
+          sudo apt-get update -qq &&
+          sudo apt-get -yqq install gnupg2
+          git clone https://github.com/stackexchange/blackbox.git
           cd blackbox
           make manual-install
           cd ..
