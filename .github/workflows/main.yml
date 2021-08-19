@@ -28,6 +28,7 @@ jobs:
           gpg2 -v --import <(echo "$GPG_PRIVATE_KEY")
           GPG=gpg2 blackbox_postdeploy
           curl -Lo ./dnscontrol https://github.com/StackExchange/dnscontrol/releases/download/v3.11.0/dnscontrol-Linux
+          chmod +x ./dnscontrol
 
       - name: Run dnscontrol preview
         shell: bash
