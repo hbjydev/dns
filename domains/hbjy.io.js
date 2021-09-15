@@ -6,8 +6,8 @@ D('hbjy.io', noreg, DnsProvider(cloudflare),
   A('unifi', ips['home'], cf_proxy_on),
   A('plex', ips['home'], cf_proxy_on),
 
-  A('znc', ips['do-host']),
-  A('rpm', ips['do-host']),
+  AAAA('znc', ips['do-host']),
+  AAAA('rpm', ips['do-host']),
 
   A('monitor', ips['kube-lb']),
 
