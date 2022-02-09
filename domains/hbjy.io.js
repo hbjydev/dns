@@ -15,6 +15,6 @@ D('hbjy.io', noreg, DnsProvider(cloudflare),
 
   TXT('@', 'keybase-site-verification=oGR6lPFIq4xje-3OMIr0UNvaF5Di5oSJzePC2_61kho'),
   
-  CNAME('cdg-dev-s3', 'cdg-dev-s3.hbjy.io.s3.fr-par.scw.cloud')
+  CNAME('cdg-dev-s3', 'cdg-dev-s3.hbjy.io.s3.fr-par.scw.cloud.')
 );
 
