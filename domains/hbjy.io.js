@@ -12,6 +12,8 @@ D('hbjy.io', noreg, DnsProvider(cloudflare),
   A('monitor', ips['kube-lb']),
 
   A('cdg-dat-postgres01.scw', ips['postgres01']),
+  
+  A('core', '142.93.32.141'),
 
   TXT('@', 'keybase-site-verification=oGR6lPFIq4xje-3OMIr0UNvaF5Di5oSJzePC2_61kho'),
   
